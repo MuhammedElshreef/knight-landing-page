@@ -20,7 +20,7 @@
     <div>
       <!-- navBar -->
       <div
-        class="bg-black opacity-90 fixed left-0 right-0 top-0 flex justify-between px-12 py-8 z-50 "
+        class="bg-black opacity-90 fixed left-0 right-0 top-0 flex justify-between px-12 py-8 z-50"
         id="navBar"
       >
         <div>
@@ -225,23 +225,25 @@
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
                   <img
-                    src="../public/img/blog-1.jpg"
+                    src="./public/img/blog-1.jpg"
                     class="w-[290px]"
                     alt="blog 1"
                   />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="../public/img/blog-2.jpg"
+                    src="./public/img/blog-2.jpg"
                     class="w-[290px]"
-                    alt="blog 2"
+                    alt="blog
+                  2"
                   />
                 </div>
                 <div class="swiper-slide">
                   <img
-                    src="../public/img/blog-3.jpg"
+                    src="./public/img/blog-3.jpg"
                     class="w-[290px]"
-                    alt="blog 3"
+                    alt="blog
+                  3"
                   />
                 </div>
               </div>
@@ -494,9 +496,10 @@
           <div class="grid lg:grid-cols-3 gap-6">
             <div class="flex flex-col gap-4 bg-[#263238] rounded-lg">
               <img
-                src="../public/img/blog-1.jpg"
+                src="./public/img/blog-1.jpg"
                 class="rounded-t-lg"
-                alt="blog 1 image"
+                alt="blog 1
+              image"
               />
               <div class="flex flex-col gap-4 py-6 px-6">
                 <h2 class="text-white text-xl h-12">
@@ -518,7 +521,7 @@
             </div>
             <div class="flex flex-col gap-4 bg-[#263238] rounded-lg">
               <img
-                src="../public/img/blog-2.jpg"
+                src="./public/img/blog-2.jpg"
                 class="rounded-t-lg"
                 alt="blog 2 image"
               />
@@ -542,7 +545,7 @@
             </div>
             <div class="flex flex-col gap-4 bg-[#263238] rounded-lg">
               <img
-                src="../public/img/blog-3.jpg"
+                src="./public/img/blog-3.jpg"
                 class="rounded-t-lg"
                 alt="blog 3 image"
               />
@@ -669,13 +672,14 @@
     width: 400px;
     height: 100%;
   }
-
+  .swiper-slide {
+    width: fit-content;
+  }
   .swiper-pagination-bullet {
     width: 15px;
     height: 15px;
     opacity: 1;
     background-color: #031813;
-    
   }
   .swiper-pagination-bullet-active {
     background: #16af88;
