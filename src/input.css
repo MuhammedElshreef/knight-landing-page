@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.swiper-pagination {
+  @apply lg:pb-16;
+}
