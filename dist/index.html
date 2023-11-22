@@ -22,7 +22,7 @@
     <div>
       <!-- navBar -->
       <div
-        class="bg-black/80 fixed left-0 right-0 top-0 flex justify-between px-12 py-8 z-50 animate__animated animate__slideInDown"
+        class="bg-black/80 fixed left-0 right-0 top-0 flex justify-between items-center px-12 py-8 z-50 animate__animated animate__slideInDown"
         id="navBar"
       >
         <div>
@@ -40,9 +40,41 @@
             <li><a href="#blog" class="hover:text-gray-200">Blog</a></li>
           </ul>
         </div>
+        <label
+          class="btn btn-circle swap swap-rotate text-red-white bg-transparent border-none   lg:hidden"
+        >
+          <!-- this hidden checkbox controls the state -->
+          <input type="checkbox" />
+
+          <!-- hamburger icon -->
+          <svg
+            class="swap-off fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <path
+              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+            />
+          </svg>
+
+          <!-- close icon -->
+          <svg
+            class="swap-on fill-current"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            viewBox="0 0 512 512"
+          >
+            <polygon
+              points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+            />
+          </svg>
+        </label>
       </div>
       <div
-        class="bg-black flex items-center justify-center lg:py-44 pt-36 lg:pt-0"
+        class="bg-black flex items-center justify-center lg:py-44 pt-36 animate__animated animate__fadeIn"
       >
         <div class="flex items-center flex-col gap-6">
           <p
@@ -77,10 +109,11 @@
       </div>
       <!-- features section -->
       <div
-        class="bg-black text-white flex flex-col items-center lg:gap-44 gap-12 lg:py-24 pt-24"
-        id="features"
+        class="bg-black text-white flex flex-col items-center lg:gap-44 gap-12 lg:py-24 pt-24 animate__animated"
       >
-        <div class="flex flex-col gap-6 items-center">
+        <div
+          class="flex flex-col gap-6 items-center animate__animated animate__fadeIn"
+        >
           <p
             class="lg:text-4xl text-2xl leading-relaxed text-white text-center font-bold lg:w-2/3"
           >
@@ -93,7 +126,10 @@
             in nisi commodo, tempus odio a, vestibulum nibh.
           </p>
         </div>
-        <div class="container grid lg:grid-cols-2 gap-8">
+        <div
+          class="container grid lg:grid-cols-2 gap-8 animate__animated"
+          id="features-grid"
+        >
           <div class="flex flex-col items-center gap-6">
             <div class="rounded-full px-6 py-6 bg-[#031813]">
               <svg
@@ -209,7 +245,10 @@
             </p>
           </div>
         </div>
-        <div class="container flex lg:flex-row flex-col gap-12 pb-24 lg:pb-0">
+        <div
+          class="container flex lg:flex-row flex-col gap-12 pb-24 lg:pb-0 animate__animated"
+          id="features-footer"
+        >
           <div class="flex flex-col items-center gap-8">
             <p
               class="lg:text-5xl text-3xl text-white lg:text-start text-center"
@@ -262,11 +301,13 @@
       </div>
       <!-- pricing section -->
       <div
-        class="flex flex-col items-center py-24 bg-[#11171a] -skew-y-3"
-        id="pricing"
+        class="flex flex-col items-center py-24 bg-[#11171a] -skew-y-3 animate__animated animatee__fadeIn"
       >
-        <div class="flex flex-col gap-24 skew-y-3">
-          <div class="flex flex-col gap-6 animate__animated animate__zoomIn">
+        <div
+          class="flex flex-col gap-24 skew-y-3 animate__animated"
+          id="pricing"
+        >
+          <div class="flex flex-col gap-6">
             <p class="text-white lg:text-5xl text-center">
               Choose your pricing plan.
             </p>
@@ -276,7 +317,7 @@
           </div>
           <div class="container grid lg:grid-cols-3 justify-items-center gap-8">
             <div
-              class="flex flex-col items-center justify-center gap-12 bg-[#263238] py-16 lg:w-[400px] w-full rounded-lg animate__animated animate__fadeInLeft"
+              class="flex flex-col items-center justify-center gap-12 bg-[#263238] py-16 lg:w-[400px] w-full rounded-lg"
             >
               <p class="text-4xl text-white">personal</p>
               <div class="flex flex-col gap-4 text-center">
@@ -300,7 +341,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col items-center justify-center gap-12 bg-[#263238] py-16 w-full rounded-lg animate__animated animate__fadeInUp"
+              class="flex flex-col items-center justify-center gap-12 bg-[#263238] py-16 w-full rounded-lg"
             >
               <p class="text-4xl text-white">Agency</p>
               <div class="flex flex-col gap-4 text-center">
@@ -324,7 +365,7 @@
               </div>
             </div>
             <div
-              class="flex flex-col items-center justify-center gap-12 bg-[#263238] py-16 w-full rounded-lg animate__animated animate__fadeInRight"
+              class="flex flex-col items-center justify-center gap-12 bg-[#263238] py-16 w-full rounded-lg"
             >
               <p class="text-4xl text-white">Enterprise</p>
               <div class="flex flex-col gap-4 text-center">
@@ -348,7 +389,10 @@
               </div>
             </div>
           </div>
-          <div class="container flex lg:flex-row flex-col lg:gap-44 gap-20">
+          <div
+            class="container flex lg:flex-row flex-col lg:gap-44 gap-20 animate__animated"
+            id="pricing-cover"
+          >
             <div class="flex flex-col gap-4">
               <h2 class="text-white text-3xl">Everything is covered.</h2>
               <p class="text-[#c3c3c3] text-lg">
@@ -423,9 +467,12 @@
         </div>
       </div>
       <!-- FAQ Section -->
-      <div class="bg-[#11171a] -skew-y-3" id="faq">
+      <div class="bg-[#11171a] -skew-y-3">
         <div class="bg-black skew-y-6 py-24 flex flex-col gap-12">
-          <div class="container -skew-y-3 flex flex-col items-center gap-16">
+          <div
+            class="container -skew-y-3 flex flex-col items-center gap-16 animate__animated"
+            id="faq"
+          >
             <div class="flex flex-col items-center gap-4">
               <p
                 class="text-white lg:text-4xl text-3xl lg:w-2/3 text-center leading-relaxed font-bold"
@@ -504,8 +551,11 @@
         </div>
       </div>
       <!-- blog section -->
-      <div class="bg-[#11171a] py-36 animated-blog" id="blog">
-        <div class="container flex flex-col items-center gap-16">
+      <div class="bg-[#11171a] py-36">
+        <div
+          class="container flex flex-col items-center gap-16 animate__animated"
+          id="blog"
+        >
           <div class="flex flex-col items-center gap-4">
             <h2 class="text-white lg:text-5xl text-3xl font-bold">
               News from knight
@@ -598,8 +648,12 @@
           </div>
         </div>
       </div>
+      <!-- footer -->
       <div class="bg-black">
-        <div class="container flex flex-col gap-16 py-24 items-center">
+        <div
+          class="container flex flex-col gap-16 py-24 items-center animate__animated"
+          id="footer"
+        >
           <div class="flex lg:flex-row flex-col lg:gap-56 gap-12">
             <div class="flex flex-col gap-4 lg:w-1/3">
               <h2 class="text-white lg:text-2xl text-xl">ABOUT KNIGHT</h2>
@@ -670,81 +724,28 @@
           <p class="text-[#566d7c]">© 2019 Knight - All Rights Reserved</p>
         </div>
       </div>
+      <button
+        id="scroll-to-top-btn"
+        class="fixed lg:right-12 right-4 bottom-12 inline-flex items-center justify-center w-12 h-12 bg-[#1de9b6] rounded-full z-40 group hidden animate__animated"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="w-6 h-6 transition ease-in-out group-hover:-translate-y-1 group-hover:scale-105 duration-300"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 19.5v-15m0 0l-6.75 6.75M12 4.5l6.75 6.75"
+          />
+        </svg>
+      </button>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 30,
-        centeredSlides: true,
-        effect: "fade",
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-      let prevScrollPos = window.pageYOffset;
-
-      window.onscroll = function () {
-        let currentScrollPos = window.pageYOffset;
-
-        // Determine the scroll direction
-        if (prevScrollPos > currentScrollPos) {
-          // Scrolling up, show the navbar
-          document
-            .getElementById("navBar")
-            .classList.remove("animate__slideOutUp");
-          document
-            .getElementById("navBar")
-            .classList.add("animate__slideInDown");
-          document.getElementById("navBar").classList.remove("hidden");
-        } else {
-          // Scrolling down, hide the navbar
-
-          document
-            .getElementById("navBar")
-            .classList.remove("animate__slideInDown");
-          document
-            .getElementById("navBar")
-            .classList.add("animate__slideOutUp");
-        }
-
-        prevScrollPos = currentScrollPos;
-      };
-      // animations for sections
-      // import "animate.css/animate.min.css";
-      // import Waypoint from "waypoints/lib/noframework.waypoints.min";
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // Get the sections by their IDs
-        const pricing = document.getElementById("pricing");
-
-        // Function to check if a section is in the viewport
-        function isElementInViewport(el) {
-          const rect = el.getBoundingClientRect();
-          return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <=
-              (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <=
-              (window.innerWidth || document.documentElement.clientWidth)
-          );
-        }
-        function handleScroll() {
-          if (isElementInViewport(pricing)) {
-            console.log("Section 1 is in the viewport");
-          } else if (isElementInViewport(section2)) {
-            console.log("Section 2 is in the viewport");
-          } else if (isElementInViewport(section3)) {
-            console.log("Section 3 is in the viewport");
-          }
-        }
-      });
-    </script>
+    <script src="main.js"></script>
   </body>
 </html>
 <style>
