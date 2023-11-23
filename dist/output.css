@@ -1664,6 +1664,20 @@ html {
   background-color: transparent;
 }
 
+.bg-\[\#\] {
+  background-color: #;
+}
+
+.bg-\[\#c3c3c3\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(195 195 195 / var(--tw-bg-opacity));
+}
+
+.bg-\[\#112\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(17 17 34 / var(--tw-bg-opacity));
+}
+
 .fill-current {
   fill: currentColor;
 }
@@ -1742,6 +1756,16 @@ html {
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .pb-24 {
@@ -2084,6 +2108,11 @@ html {
   .lg\:py-8 {
     padding-top: 2rem;
     padding-bottom: 2rem;
+  }
+
+  .lg\:px-12 {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .lg\:pb-0 {
