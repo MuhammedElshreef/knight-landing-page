@@ -1,3 +1,7 @@
+const hamBurgerCheckBox = document.getElementById("hamburger-checkbox");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const hamburgerMenuUl =
+  document.getElementById("hamburger-menu").firstElementChild;
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -24,6 +28,8 @@ window.onscroll = function () {
       // Scrolling up, show the navbar
       document.getElementById("navBar").classList.remove("animate__slideOutUp");
       document.getElementById("navBar").classList.add("animate__slideInDown");
+      hamburgerMenu.classList.add("hidden");
+      hamBurgerCheckBox.checked = false;
     } else {
       // Scrolling down, hide the navbar
 
@@ -105,10 +111,6 @@ function isElemntInView() {
   }
 }
 
-const hamBurgerCheckBox = document.getElementById("hamburger-checkbox");
-const hamburgerMenu = document.getElementById("hamburger-menu");
-const hamburgerMenuUl =
-  document.getElementById("hamburger-menu").firstElementChild;
 hamBurgerCheckBox.addEventListener("change", () => {
   if (hamBurgerCheckBox.checked) {
     hamburgerMenuUl.classList.remove("animate__slideOutRight");
