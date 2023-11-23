@@ -23,59 +23,79 @@
     <title>Document</title>
   </head>
   <body class="font-play-pen bg-black">
-    <div>
-      <!-- navBar -->
+    <!-- navBar -->
+    <div class="flex flex-col">
       <div
-        class="bg-black/80 fixed left-0 right-0 top-0 flex justify-between items-center px-12 py-8 z-50 animate__animated animate__slideInDown"
+        class="lg:bg-black/80 bg-black fixed left-0 right-0 top-0 z-50 animate__animated animate__slideInDown"
         id="navBar"
       >
-        <div>
-          <a class="text-[#1de9b6] text-2xl hover:text-gray-200 cursor-pointer">
-            KNIGHT
-          </a>
+        <div class="flex justify-between items-center px-12 lg:py-8 py-6">
+          <div>
+            <a
+              class="text-[#1de9b6] text-2xl hover:text-gray-200 cursor-pointer"
+            >
+              KNIGHT
+            </a>
+          </div>
+          <div class="hidden lg:block">
+            <ul class="text-[#C3C3C3] text-lg flex gap-10">
+              <li>
+                <a href="#features" class="hover:text-gray-200"> Features </a>
+              </li>
+              <li>
+                <a href="#pricing" class="hover:text-gray-200">Pricing</a>
+              </li>
+              <li><a href="#faq" class="hover:text-gray-200">FAQ</a></li>
+              <li><a href="#blog" class="hover:text-gray-200">Blog</a></li>
+            </ul>
+          </div>
+          <label
+            class="btn btn-circle swap swap-rotate text-red-white bg-transparent border-none lg:hidden"
+          >
+            <!-- this hidden checkbox controls the state -->
+            <input type="checkbox" id="hamburger-checkbox" />
+
+            <!-- hamburger icon -->
+            <svg
+              class="swap-off fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 512 512"
+            >
+              <path
+                d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
+              />
+            </svg>
+
+            <!-- close icon -->
+            <svg
+              class="swap-on fill-current"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 512 512"
+            >
+              <polygon
+                points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
+              />
+            </svg>
+          </label>
         </div>
-        <div class="hidden lg:block">
-          <ul class="text-[#C3C3C3] text-lg flex gap-10">
+        <div class="bg-black hidden animate__animated" id="hamburger-menu">
+          <ul
+            class="text-[#C3C3C3] text-lg flex flex-col gap-6 px-12 py-6 animate__animated"
+          >
             <li>
               <a href="#features" class="hover:text-gray-200"> Features </a>
             </li>
-            <li><a href="#pricing" class="hover:text-gray-200">Pricing</a></li>
+            <li>
+              <a href="#pricing" class="hover:text-gray-200">Pricing</a>
+            </li>
             <li><a href="#faq" class="hover:text-gray-200">FAQ</a></li>
             <li><a href="#blog" class="hover:text-gray-200">Blog</a></li>
           </ul>
         </div>
-        <label
-          class="btn btn-circle swap swap-rotate text-red-white bg-transparent border-none lg:hidden"
-        >
-          <!-- this hidden checkbox controls the state -->
-          <input type="checkbox" />
-
-          <!-- hamburger icon -->
-          <svg
-            class="swap-off fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
-          >
-            <path
-              d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"
-            />
-          </svg>
-
-          <!-- close icon -->
-          <svg
-            class="swap-on fill-current"
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="32"
-            viewBox="0 0 512 512"
-          >
-            <polygon
-              points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"
-            />
-          </svg>
-        </label>
       </div>
       <div
         class="bg-black flex items-center justify-center lg:py-44 pt-36 animate__animated animate__fadeIn"
@@ -728,6 +748,7 @@
           <p class="text-[#566d7c]">© 2019 Knight - All Rights Reserved</p>
         </div>
       </div>
+      <!-- scroll to top -->
       <button
         id="scroll-to-top-btn"
         class="fixed lg:right-12 right-4 bottom-12 inline-flex items-center justify-center w-12 h-12 bg-[#1de9b6] rounded-full z-40 group hidden animate__animated"
@@ -737,7 +758,7 @@
           fill="none"
           viewBox="0 0 24 24"
           stroke-width="1.5"
-          stroke="currentColor"
+          stroke="black"
           class="w-6 h-6 transition ease-in-out group-hover:-translate-y-1 group-hover:scale-105 duration-300"
         >
           <path

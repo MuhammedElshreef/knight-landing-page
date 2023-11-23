@@ -105,4 +105,20 @@ function isElemntInView() {
   }
 }
 
-window.addEventListener("scroll", function () {});
+const hamBurgerCheckBox = document.getElementById("hamburger-checkbox");
+const hamburgerMenu = document.getElementById("hamburger-menu");
+const hamburgerMenuUl =
+  document.getElementById("hamburger-menu").firstElementChild;
+hamBurgerCheckBox.addEventListener("change", () => {
+  if (hamBurgerCheckBox.checked) {
+    hamburgerMenuUl.classList.remove("animate__slideOutRight");
+
+    hamburgerMenuUl.classList.add("animate__slideInLeft");
+    hamburgerMenu.classList.remove("hidden");
+  } else {
+    hamburgerMenuUl.classList.add("animate__slideOutRight");
+    setTimeout(() => {
+      hamburgerMenu.classList.add("hidden");
+    }, 500);
+  }
+});
