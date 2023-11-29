@@ -2,6 +2,9 @@ const hamBurgerCheckBox = document.getElementById("hamburger-checkbox");
 const hamburgerMenu = document.getElementById("hamburger-menu");
 const hamburgerMenuUl =
   document.getElementById("hamburger-menu").firstElementChild;
+
+const navBar = document.getElementById("navBar");
+
 var swiper = new Swiper(".mySwiper", {
   spaceBetween: 30,
   centeredSlides: true,
@@ -26,8 +29,8 @@ window.onscroll = function () {
   if (window.scrollY >= 700) {
     if (prevScrollPos > currentScrollPos) {
       // Scrolling up, show the navbar
-      document.getElementById("navBar").classList.remove("animate__slideOutUp");
-      document.getElementById("navBar").classList.add("animate__slideInDown");
+      navBar.classList.remove("animate__slideOutUp");
+      navBar.classList.add("animate__slideInDown");
       hamburgerMenu.classList.add("hidden");
       hamBurgerCheckBox.checked = false;
     } else {
@@ -36,7 +39,7 @@ window.onscroll = function () {
       document
         .getElementById("navBar")
         .classList.remove("animate__slideInDown");
-      document.getElementById("navBar").classList.add("animate__slideOutUp");
+      navBar.classList.add("animate__slideOutUp");
     }
     prevScrollPos = currentScrollPos;
   }
